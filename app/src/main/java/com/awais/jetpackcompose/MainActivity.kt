@@ -14,25 +14,20 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            JetpackComposeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
+            Greeting(name = "Awais")
         }
     }
 }
 
+//Composable is simple reusable view in Android
 @Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
 
+//use to just preview our views. sometime it preview changes live and sometimes it's need to rebuild the project
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    JetpackComposeTheme {
-        Greeting("Android")
-    }
+    Greeting("Awais")
 }
